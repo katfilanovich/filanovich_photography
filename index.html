@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Filanovich Photography</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: clamp(55px, 12vw, 150px);
+      font-weight: 300;
+      letter-spacing: 8px;
+    }
+
+    .subtitle {
+      margin-top: 25px;
+      color: #aaa;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    .series {
+      padding: 100px 6%;
+    }
+
+    .series-title {
+      font-size: 42px;
+      font-weight: 300;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      height: 600px;
+      background: #292929;
+      display: flex;
+      align-items: flex-end;
+      padding: 35px;
+      text-decoration: none;
+      color: white;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover {
+      transform: scale(0.98);
+    }
+
+    .card h2 {
+      font-size: 32px;
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+
+    footer {
+      padding: 70px 20px;
+      text-align: center;
+      color: #777;
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 700px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        height: 450px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div>
+      <h1>FILANOVICH</h1>
+      <p class="subtitle">Photography</p>
+    </div>
+  </header>
+
+  <section class="series">
+
+    <h2 class="series-title">Selected Series</h2>
+
+    <div class="grid">
+
+      <a class="card" href="series-01.html">
+        <h2>SERIES 01</h2>
+      </a>
+
+      <a class="card" href="series-02.html">
+        <h2>SERIES 02</h2>
+      </a>
+
+      <a class="card" href="series-03.html">
+        <h2>SERIES 03</h2>
+      </a>
+
+      <a class="card" href="series-04.html">
+        <h2>SERIES 04</h2>
+      </a>
+
+    </div>
+
+  </section>
+
+  <footer>
+    FILANOVICH PHOTOGRAPHY
+  </footer>
+
+</body>
+</html>
