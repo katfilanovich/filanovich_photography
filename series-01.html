@@ -72,99 +72,104 @@
       text-transform: uppercase;
     }
 
-    /* GALLERY */
+    
+   .gallery {
+  width: 88%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding-bottom: 140px;
+}
 
-    .gallery {
-      width: 88%;
-      max-width: 1450px;
-      margin: 0 auto;
-      padding-bottom: 140px;
-    }
+.pair {
+  display: flex;
+  align-items: stretch;
+  gap: 30px;
+  margin-bottom: 90px;
+}
 
-    .row {
-      display: flex;
-      align-items: flex-start;
-      gap: 30px;
-      margin-bottom: 90px;
-    }
+.photo {
+  cursor: pointer;
+  overflow: hidden;
+}
 
-    .photo {
-      cursor: pointer;
-      overflow: hidden;
-    }
+.photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
 
-    .photo img {
-      display: block;
-      width: 100%;
-      height: auto;
-      transition: transform 0.5s ease, opacity 0.5s ease;
-    }
+.photo:hover img {
+  transform: scale(0.98);
+  opacity: 0.78;
+}
 
-    .photo:hover img {
-      transform: scale(0.98);
-      opacity: 0.78;
-    }
+.number {
+  margin-top: 12px;
+  color: #555;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
 
-    .number {
-      margin-top: 12px;
-      color: #555;
-      font-size: 10px;
-      letter-spacing: 2px;
-    }
 
-    /* 01 + 02 */
+/* 01 + 02 */
 
-    .row-one .photo {
-      width: calc(50% - 15px);
-    }
+.equal .photo {
+  width: calc(50% - 15px);
+}
 
-    /* 03 + 04
-       03 is horizontal and therefore wider.
-       04 is vertical and has the same height. */
 
-    .row-two {
-      align-items: stretch;
-    }
+/* 03 + 04
+   wide horizontal + narrow vertical */
 
-    .row-two .photo:first-child {
-      width: 68%;
-    }
+.wide-left .photo:first-child {
+  width: 68%;
+}
 
-    .row-two .photo:last-child {
-      width: 32%;
-    }
+.wide-left .photo:last-child {
+  width: 32%;
+}
 
-    .row-two .photo img {
-      height: 100%;
-      object-fit: cover;
-    }
 
-    /* 05 */
+/* 06 + 05
+   narrow vertical + wide horizontal */
 
-    .row-five {
-      display: block;
-    }
+.wide-right .photo:first-child {
+  width: 32%;
+}
 
-    .row-five .photo {
-      width: 100%;
-    }
+.wide-right .photo:last-child {
+  width: 68%;
+}
 
-    /* 06 + 07 */
 
-    .row-six .photo {
-      width: calc(50% - 15px);
-    }
+/* mobile */
 
-    /* 08 */
+@media (max-width: 600px) {
 
-    .row-eight {
-      display: block;
-      margin-bottom: 0;
-    }
+  .gallery {
+    width: 88%;
+  }
 
-    .row-eight .photo {
-      width: 100%;
-    }
+  .pair {
+    display: block;
+    margin-bottom: 70px;
+  }
+
+  .equal .photo,
+  .wide-left .photo:first-child,
+  .wide-left .photo:last-child,
+  .wide-right .photo:first-child,
+  .wide-right .photo:last-child {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .pair .photo:last-child {
+    margin-bottom: 0;
+  }
+
+}
 
     /* LIGHTBOX */
 
@@ -376,136 +381,103 @@
   </section>
 
 
-  <main class="gallery">
+<main class="gallery">
+
+  <!-- 01 + 02 -->
+
+  <section class="pair equal">
+
+    <div class="photo" data-index="0">
+      <img
+        src="r001-003.jpg"
+        alt="Ordinary Days — 01"
+      >
+      <div class="number">01 / 08</div>
+    </div>
+
+    <div class="photo" data-index="1">
+      <img
+        src="images/series-01/PHSQUAT10698007.JPG"
+        alt="Ordinary Days — 02"
+      >
+      <div class="number">02 / 08</div>
+    </div>
+
+  </section>
 
 
-    <!-- 01 + 02 -->
+  <!-- 03 + 04 -->
 
-    <section class="row row-one">
+  <section class="pair wide-left">
 
-      <div class="photo" data-index="0">
+    <div class="photo" data-index="2">
+      <img
+        src="images/series-01/PHSQUAT10698011.JPG"
+        alt="Ordinary Days — 03"
+      >
+      <div class="number">03 / 08</div>
+    </div>
 
-        <img
-          src="r001-003.jpg"
-          alt="Ordinary Days — 01"
-        >
+    <div class="photo" data-index="3">
+      <img
+        src="images/series-01/PHSQUAT10698012.JPG"
+        alt="Ordinary Days — 04"
+      >
+      <div class="number">04 / 08</div>
+    </div>
 
-        <div class="number">01 / 08</div>
-
-      </div>
-
-
-      <div class="photo" data-index="1">
-
-        <img
-          src="images/series-01/PHSQUAT10698007.JPG"
-          alt="Ordinary Days — 02"
-        >
-
-        <div class="number">02 / 08</div>
-
-      </div>
-
-    </section>
+  </section>
 
 
-    <!-- 03 + 04 -->
+  <!-- 06 + 05 -->
 
-    <section class="row row-two">
+  <section class="pair wide-right">
 
-      <div class="photo" data-index="2">
+    <div class="photo" data-index="5">
+      <img
+        src="images/series-01/PHSQUAT10698026.JPG"
+        alt="Ordinary Days — 06"
+      >
+      <div class="number">06 / 08</div>
+    </div>
 
-        <img
-          src="images/series-01/PHSQUAT10698011.JPG"
-          alt="Ordinary Days — 03"
-        >
+    <div class="photo" data-index="4">
+      <img
+        src="images/series-01/PHSQUAT10698015.JPG"
+        alt="Ordinary Days — 05"
+      >
+      <div class="number">05 / 08</div>
+    </div>
 
-        <div class="number">03 / 08</div>
-
-      </div>
-
-
-      <div class="photo" data-index="3">
-
-        <img
-          src="images/series-01/PHSQUAT10698012.JPG"
-          alt="Ordinary Days — 04"
-        >
-
-        <div class="number">04 / 08</div>
-
-      </div>
-
-    </section>
+  </section>
 
 
-    <!-- 05 -->
+  <!-- 07 + 08 -->
 
-    <section class="row row-five">
+  <section class="pair equal">
 
-      <div class="photo" data-index="4">
+    <div class="photo" data-index="6">
+      <img
+        src="images/series-01/r001-033о.jpg"
+        alt="Ordinary Days — 07"
+      >
+      <div class="number">07 / 08</div>
+    </div>
 
-        <img
-          src="images/series-01/PHSQUAT10698015.JPG"
-          alt="Ordinary Days — 05"
-        >
+    <div class="photo" data-index="7">
+      <img
+        src="images/series-01/PHSQUAT10698036.JPG"
+        alt="Ordinary Days — 08"
+      >
+      <div class="number">08 / 08</div>
+    </div>
 
-        <div class="number">05 / 08</div>
+  </section>
 
-      </div>
+</main>  
 
-    </section>
+    
 
-
-    <!-- 06 + 07 -->
-
-    <section class="row row-six">
-
-      <div class="photo" data-index="5">
-
-        <img
-          src="images/series-01/PHSQUAT10698026.JPG"
-          alt="Ordinary Days — 06"
-        >
-
-        <div class="number">06 / 08</div>
-
-      </div>
-
-
-      <div class="photo" data-index="6">
-
-        <img
-          src="images/series-01/r001-033о.jpg"
-          alt="Ordinary Days — 07"
-        >
-
-        <div class="number">07 / 08</div>
-
-      </div>
-
-    </section>
-
-
-    <!-- 08 -->
-
-    <section class="row row-eight">
-
-      <div class="photo" data-index="7">
-
-        <img
-          src="images/series-01/PHSQUAT10698036.JPG"
-          alt="Ordinary Days — 08"
-        >
-
-        <div class="number">08 / 08</div>
-
-      </div>
-
-    </section>
-
-
-  </main>
 
 
   <!-- LIGHTBOX -->
