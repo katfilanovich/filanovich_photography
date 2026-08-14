@@ -72,8 +72,19 @@
     }
 
     .photo {
-      aspect-ratio: 4 / 5;
+      width: 100%;
       background: #292929;
+      overflow: hidden;
+    }
+
+    .photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .placeholder {
+      aspect-ratio: 4 / 5;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -82,9 +93,8 @@
       letter-spacing: 2px;
     }
 
-    .photo.wide {
+    .wide {
       grid-column: span 2;
-      aspect-ratio: 16 / 9;
     }
 
     footer {
@@ -110,7 +120,7 @@
         grid-template-columns: 1fr;
       }
 
-      .photo.wide {
+      .wide {
         grid-column: span 1;
       }
 
@@ -139,26 +149,26 @@
   <section class="gallery">
 
     <div class="photo">
-      PHOTO 01
+      <img src="r001-003.jpg" alt="Series 01 — Photo 01">
     </div>
 
-    <div class="photo">
+    <div class="photo placeholder">
       PHOTO 02
     </div>
 
-    <div class="photo wide">
+    <div class="photo placeholder wide">
       PHOTO 03
     </div>
 
-    <div class="photo">
+    <div class="photo placeholder">
       PHOTO 04
     </div>
 
-    <div class="photo">
+    <div class="photo placeholder">
       PHOTO 05
     </div>
 
-    <div class="photo">
+    <div class="photo placeholder">
       PHOTO 06
     </div>
 
